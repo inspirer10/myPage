@@ -16,6 +16,11 @@ body {
 }
 
 /* TEST */
+.mobile {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .background {
   background-image: url(../img/map2.jpg);
   filter: brightness(35%) blur(5px);
@@ -133,13 +138,9 @@ body {
   z-index: 21;
 }
 
-.martin {
-  color: red;
-  font-size: 50px;
-}
-
-.csgo {
-  display: none;
+.row_aboutMe {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
 /* header */
@@ -308,6 +309,7 @@ header img {
   border: 1px solid white;
   padding: 10px 20px;
   color: white;
+  transition: .3s ease-in-out;
 }
 
 .description .button:hover {
@@ -353,7 +355,7 @@ header img {
   background-color: white;
   text-align: center;
   position: relative;
-  padding: 120px;
+  padding: 120px 70px;
 }
 
 .aboutMe h2 {
@@ -371,15 +373,8 @@ header img {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-align: center;
       align-items: center;
-}
-
-.row_aboutMe {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
 }
 
 .row_aboutMe p {
@@ -389,23 +384,6 @@ header img {
   padding: 0 25px;
 }
 
-/* .row_about__block {
-    padding: 0 50px;
-    float: left;
-    position: relative;
-    width: 50%;
-}
-
-.row_about__border {
-    padding: 50px 10px;
-    border: 1px solid black;
-    margin: 0 15px;
-    text-align: center;
-
-} */
-/* .row_about__border:hover img {
-    transform: scale(1.07);
-} */
 /* End About */
 /* Motto */
 .slogan {
@@ -431,7 +409,7 @@ header img {
 }
 
 .bg {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 170px 0;
 }
 
@@ -523,6 +501,14 @@ header img {
   transform: translate(-50%, -50%);
   font-size: 6rem;
   font-weight: 300;
+}
+
+.skill_example:hover .skill {
+  opacity: 1;
+}
+
+.skill_example:hover p {
+  display: none;
 }
 
 /*  End Technologies */
@@ -668,17 +654,6 @@ header img {
   padding-top: 20px;
 }
 
-.test {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 60px;
-  margin: 0 auto;
-}
-
 .social {
   display: -ms-flexbox;
   display: flex;
@@ -694,11 +669,6 @@ header img {
   line-height: 4vh;
   padding-left: 10px;
   font-size: 1.5rem;
-}
-
-.test a {
-  text-decoration: none;
-  color: black;
 }
 
 .alert a {
@@ -798,6 +768,23 @@ footer i {
     font-size: 2.5rem;
     padding: 25px;
     line-height: 30px;
+  }
+  .aboutMe {
+    padding: 80px 0 50px;
+  }
+  .aboutMe h2 {
+    font-size: 4.5rem;
+    margin-bottom: 50px;
+  }
+  .row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .row_aboutMe p {
+    text-align: center;
+    padding: 20px 25px;
+    margin: 0 auto;
+    width: 70%;
   }
 }
 
@@ -951,6 +938,9 @@ footer i {
   }
   .slogan {
     background-image: url("../img/test.jpeg");
+    background-position: center;
+    background-attachment: unset;
+    height: 100vh;
   }
   .contact {
     padding: 80px 0;
@@ -1008,10 +998,6 @@ footer i {
   }
   nav a {
     padding: 0 15px;
-  }
-  .hamburger {
-    color: white;
-    font-size: 30px;
   }
   .logo {
     background-color: inherit;
@@ -1079,9 +1065,6 @@ footer i {
   .contact_header div {
     font-size: 1rem;
   }
-  .slogan .text {
-    font-size: 2.2rem;
-  }
   .skill_example p {
     font-size: 2.2rem;
   }
@@ -1102,6 +1085,7 @@ footer i {
     text-align: center;
     -ms-flex-direction: column;
         flex-direction: column;
+    display: none;
   }
   nav ul li a {
     padding: 10px;
@@ -1111,6 +1095,20 @@ footer i {
   .logo {
     left: auto;
     top: auto;
+    z-index: 1;
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  .description {
+    top: 25vh;
+  }
+  .bounce {
+    margin: 80vh 0 0;
   }
   .logo.show {
     top: 50vh;
@@ -1126,25 +1124,10 @@ footer i {
 
 @media (max-width: 384px) {
   .project_about h3 {
-    font-size: 1.5rem;
-  }
-  .contact .test {
-    margin-top: 30px;
+    font-size: 1.8rem;
   }
   .contact button {
-    min-width: 260px;
-  }
-}
-
-@media (max-width: 320px) {
-  /* .row_about__block {
-        padding: 0;
-    } */
-  .project:nth-of-type(3) .project_about h3 {
-    text-indent: 0;
-  }
-  .contact .social_adres {
-    width: 60%;
+    min-width: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */

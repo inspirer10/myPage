@@ -8,18 +8,24 @@ function scrollWin() {
 
 
 var phone = document.querySelector('.container');
+var hamburger = document.querySelector('.hamburger');
+var ul = document.querySelector('ul');
+
 
 phone.addEventListener("click", function () {
     phone.classList.toggle('alert-is-shown');
-    console.log('toszarecos');
 });
 
-var skills = document.querySelectorAll('.skill_example');
+
+hamburger.addEventListener("click", function () {
+    ul.classList.toggle('mobile');
+    console.log('wqewqe');
+});
 
 
-//if (window.screen.width >= 1202 ) {
-    //skills.classList.add('csgo');
-//};
+//var skills = document.querySelectorAll('.skill_example');
+
+
 
 
 //var hamburger = document.querySelector('.hamburger');
