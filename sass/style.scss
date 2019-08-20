@@ -698,6 +698,7 @@ footer {
     background-color: #3f72af;
     background-color: #1e4ea0;
     color: white;
+    padding-bottom: 4px;
 }
 
 footer p {
@@ -1028,6 +1029,18 @@ footer i {
     #map {
         width: 100%;
     }
+
+    .row_technologies {
+        height: 185vh;
+    }
+
+    .skill {
+        opacity: 0.5;
+        height: 25vh;
+        width: 20vh;
+        margin: 10px 125px;
+    }
+
 }
 
 
@@ -1118,7 +1131,7 @@ footer i {
     }
 
     .skill_example {
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .contact button {
@@ -1128,11 +1141,6 @@ footer i {
     .web {
         display: flex;
         justify-content: center;
-    }
-
-    .project_icon {
-        //max-width: 300px;
-        //min-width: 0;
     }
 
     .project {

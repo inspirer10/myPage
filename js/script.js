@@ -11,7 +11,6 @@ var phone = document.querySelector('.container');
 var hamburger = document.querySelector('.hamburger');
 var ul = document.querySelector('ul');
 
-
 phone.addEventListener("click", function () {
     phone.classList.toggle('alert-is-shown');
 });
@@ -19,14 +18,13 @@ phone.addEventListener("click", function () {
 
 hamburger.addEventListener("click", function () {
     ul.classList.toggle('mobile');
-    console.log('wqewqe');
 });
 
 
-//var skills = document.querySelectorAll('.skill_example');
+var mobile = document.querySelectorAll('nav ul li a');
 
-
-
-
-//var hamburger = document.querySelector('.hamburger');
-//var nav = document.querySelector('');
+for (var mobile of mobile) {
+    mobile.addEventListener('click', function () {
+        ul.classList.remove('mobile');
+    });
+};
