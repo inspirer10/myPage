@@ -1,3 +1,5 @@
+@import "normalize";
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +19,7 @@ body {
 
 /* TEST */
 .mobile {
-    display: flex;
+    display: flex !important;
 }
 
 .background {
@@ -726,14 +728,11 @@ footer i {
     }
 }
 
-
 @media (max-width: 1150px) {
     #map {
         width: 70%;
     }
 }
-
-
 
 @media (max-width: 1084px) {
     .contact_header span {
@@ -749,7 +748,6 @@ footer i {
         width: 80%;
     }
 }
-
 
 @media (max-width: 1024px) {
     nav {
@@ -1089,8 +1087,8 @@ footer i {
 
 
 @media (max-width: 710px) {
-    /* NAV */
 
+    /* NAV */
     nav {
         padding: 15px 2vw;
     }

@@ -10,6 +10,7 @@ function scrollWin() {
 var phone = document.querySelector('.container');
 var hamburger = document.querySelector('.hamburger');
 var ul = document.querySelector('ul');
+var logo = document.querySelector('.logo');
 
 phone.addEventListener("click", function () {
     phone.classList.toggle('alert-is-shown');
@@ -18,6 +19,7 @@ phone.addEventListener("click", function () {
 
 hamburger.addEventListener("click", function () {
     ul.classList.toggle('mobile');
+    logo.classList.toggle('mobile');
 });
 
 
