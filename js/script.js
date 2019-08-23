@@ -2,8 +2,10 @@ AOS.init();
 
 let windowHeight = window.innerHeight;
 
+var width = 1100;
+
 function scrollWin() {
-    window.scrollTo(0, 1100);
+    window.scrollTo(0, width);
 };
 
 

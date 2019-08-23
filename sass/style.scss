@@ -1188,11 +1188,11 @@ footer i {
     }
 
     .description {
-        top: 25vh;
+        top: 20vh;
     }
 
     .bounce {
-        margin: 80vh 0 0;
+        margin: 75vh 0 0;
     }
 
     .logo.show {
@@ -1216,5 +1216,15 @@ footer i {
 
     .contact button {
         min-width: 280px;
+    }
+}
+
+@media (max-width: 375px) {
+    .bounce {
+        margin: 70vh 0 0;
+    }
+
+    .description {
+        top: 15vh;
     }
 }
