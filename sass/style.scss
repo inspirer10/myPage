@@ -1147,45 +1147,11 @@ footer i {
 }
 
 
-@media (max-width: 667px) and (orientation: landscape) {
-    .logo.show {
-        top: 51vh;
-    }
+@media (max-width: 667px) {
+
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
-    .logo.show {
-        top: 53vh;
-    }
-
-    .description p {
-        font-size: 1.5rem;
-    }
-
-    .description h1 {
-        font-size: 2.7rem;
-    }
-
-    .description h2 {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-    }
-
-    .contact_header div {
-        font-size: 1rem;
-    }
-
-    .skill_example p {
-        font-size: 2.2rem;
-    }
-
-    .contact button {
-        font-size: 1.5rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-    }
 
 }
 

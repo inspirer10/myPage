@@ -28,5 +28,6 @@ var mobile = document.querySelectorAll('nav ul li a');
 for (var mobile of mobile) {
     mobile.addEventListener('click', function () {
         ul.classList.remove('mobile');
+        logo.classList.toggle('mobile')
     });
 };
