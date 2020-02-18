@@ -354,6 +354,15 @@ body {
   background-color: #ecfcff;
 }
 
+.kontakt {
+  text-decoration: none;
+  color: white;
+}
+
+.kontakt:visited {
+  color: white;
+}
+
 /* TEST */
 .mobile {
   display: -ms-flexbox !important;
@@ -686,6 +695,11 @@ header img {
   font-weight: bold;
   border-bottom: 2px solid;
   padding-bottom: 10px;
+}
+
+.contact_header a {
+  color: white;
+  text-decoration: none;
 }
 
 /* End Contact Header */

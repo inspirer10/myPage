@@ -1,5 +1,4 @@
 @import "normalize";
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +16,18 @@ body {
     background-color: #ecfcff;
 }
 
+.kontakt {
+    text-decoration: none;
+    color: white;
+}
+
+.kontakt:visited {
+    color: white;
+}
+
+
 /* TEST */
+
 .mobile {
     display: flex !important;
 }
@@ -31,7 +41,6 @@ body {
     background-size: cover;
     z-index: -1;
 }
-
 
 .mapSection {
     background-image: url(../img/map.jpg);
@@ -47,7 +56,6 @@ body {
     height: 500px;
     width: 50%;
     border: 2px solid black;
-
 }
 
 #phone {
@@ -64,11 +72,9 @@ body {
 .container.alert-is-shown .alert {
     transition: 0.25s;
     transition-timing-function: ease-out;
-
     transform: translateY(0);
     opacity: 1;
 }
-
 
 .container {
     width: 280px;
@@ -82,7 +88,6 @@ body {
     background-image: url(https://media.idownloadblog.com/wp-content/uploads/2016/05/Reset-iOS-home-screen-layout.png);
     background-size: contain;
     cursor: pointer;
-
     &::before {
         content: "";
         background: #666666;
@@ -93,7 +98,6 @@ body {
         width: 100%;
         height: 33px;
     }
-
     &::after {
         content: "";
         background: #848484;
@@ -142,12 +146,11 @@ body {
 }
 
 
-
-
-
 /* header */
 
+
 /* Nav */
+
 nav {
     position: fixed;
     width: 100%;
@@ -201,8 +204,8 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* End nav */
 
+/* End nav */
 
 header {
     position: relative;
@@ -231,7 +234,6 @@ header img {
 }
 
 @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -239,11 +241,9 @@ header img {
     100% {
         transform: translateY(0);
     }
-
     40% {
         transform: translateY(-30px);
     }
-
     60% {
         transform: translateY(-15px);
     }
@@ -258,12 +258,12 @@ header img {
     justify-content: center;
 }
 
+
 /* Header END */
 
 
-
-
 /* Description in Heder */
+
 .bug {
     font-size: 2.2rem;
     font-weight: 400;
@@ -328,7 +328,9 @@ header img {
     border: 1px solid black;
 }
 
+
 /* End description Text */
+
 
 /* Contact Header */
 
@@ -354,18 +356,23 @@ header img {
     padding-bottom: 10px
 }
 
+.contact_header a {
+    color: white;
+    text-decoration: none;
+}
+
+
 /* End Contact Header */
 
 
 /* About me */
+
 .aboutMe {
     background-color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
     padding: 120px 70px;
 }
-
-
 
 .aboutMe h2 {
     display: block;
@@ -395,7 +402,9 @@ header img {
     padding: 0 25px;
 }
 
+
 /* End About */
+
 
 /* Motto */
 
@@ -522,10 +531,12 @@ header img {
     display: none;
 }
 
+
 /*  End Technologies */
 
 
 /* portfolio */
+
 .portfolio {
     background-color: white;
     padding: 120px 0;
@@ -583,11 +594,12 @@ header img {
     font-weight: 300;
 }
 
+
 /* end portfolio */
 
 
-
 /* contact */
+
 .contact {
     background-color: #ecf6f6;
     padding: 100px 0;
@@ -602,7 +614,6 @@ header img {
     text-align: center;
     color: #3f72af;
 }
-
 
 .contact form {
     display: flex;
@@ -633,7 +644,6 @@ header img {
     width: 45%;
 }
 
-
 .contact textarea {
     height: 200px;
     width: 97%;
@@ -661,7 +671,6 @@ header img {
     color: white;
     background-color: black;
 }
-
 
 .contact .form_wrap {
     max-width: 800px;
@@ -693,6 +702,7 @@ header img {
 
 /* end contact */
 
+
 /* footer */
 
 footer {
@@ -708,7 +718,6 @@ footer p {
     line-height: 50px;
     text-transform: uppercase;
 }
-
 
 footer a {
     font-size: 1rem;
@@ -738,12 +747,10 @@ footer i {
     .contact_header span {
         border: none;
     }
-
     .contact_header {
         flex-direction: column;
         height: auto;
     }
-
     #map {
         width: 80%;
     }
@@ -753,29 +760,23 @@ footer i {
     nav {
         padding: 15px 3vw;
     }
-
     .project_icon {
         min-width: 55vw;
         max-width: 55vw;
     }
-
     .aboutMe {
         padding: 120px 0;
     }
-
     .skills {
         padding-bottom: 70px;
     }
-
     .skill {
         //width: 10vh;
         height: 10vh;
     }
-
     .skill_example p {
         font-size: 4rem;
     }
-
     .portfolio .project {
         //width: 51%;
         height: 40vh;
@@ -788,7 +789,6 @@ footer i {
         top: 4vh;
         left: 10vw;
     }
-
     .info {
         display: flex;
         flex-direction: column;
@@ -796,20 +796,16 @@ footer i {
         padding: 25px;
         line-height: 30px;
     }
-
     .aboutMe {
         padding: 80px 0 50px;
     }
-
     .aboutMe h2 {
         font-size: 4.5rem;
         margin-bottom: 50px;
     }
-
     .row {
         flex-direction: column;
     }
-
     .row_aboutMe p {
         text-align: center;
         padding: 20px 25px;
@@ -823,75 +819,57 @@ footer i {
         font-size: 3rem;
         top: 6vh;
     }
-
     .logo.show {
         top: 49vh;
     }
-
-
     .fa-bars.off {
         display: none;
     }
-
-
     .fa-tree.off {
         display: none;
     }
-
     .fa-tree {
         display: block;
         transform: rotate(-90deg);
     }
-
     nav {
         min-height: 10vh;
         transition: 0.3s;
     }
-
     nav ul {
         display: none;
         transition: 0.3s;
     }
-
     nav ul.show {
         display: block;
         text-align: center;
     }
-
     nav ul li a {
         line-height: 45px;
     }
-
     .iam {
         background-position: 90% 52px;
     }
-
     .description {
         top: 35vh;
         left: 12vw;
     }
-
     .description p {
         font-size: 1.8rem;
     }
-
     .description h1 {
         font-size: 3.5rem;
     }
-
     .description h2 {
         font-size: 1.7rem;
     }
-
     .contact_header div {
         font-size: 1.4rem;
         line-height: 20px;
     }
-
     .aboutMe {
         padding: 60px 0;
     }
-
     .aboutMe h2,
     .skills h2,
     .portfolio h2,
@@ -899,62 +877,49 @@ footer i {
         font-size: 3rem;
         margin-bottom: 40px;
     }
-
     .row_aboutMe p {
         font-size: 1.4rem;
         padding: 0 14px;
     }
-
     .slogan .bg {
         padding: 60px 0;
     }
-
     .skills {
         padding: 90px 0 0;
     }
-
     .skill {
         width: 17vh;
         height: 22vh;
     }
-
     .skill_example p {
         font-size: 2.8rem;
     }
-
     .portfolio .project {
         width: 30%;
         height: 55vh;
         padding-bottom: 30px;
     }
-
     .project_about h3 {
         font-size: 1.8rem;
     }
-
     .project_about p {
         font-size: 1.6rem;
     }
-
     .contact {
         padding: 60px 0;
     }
-
     .contact button {
         width: 25%;
         line-height: 26px;
         font-size: 2rem;
     }
-
     .social img {
         width: 7vh;
         height: 7vh;
     }
-
     .social span {
         line-height: 7vh;
     }
-
     footer p {
         font-size: 1rem;
         line-height: 22px;
@@ -962,20 +927,16 @@ footer i {
 }
 
 @media (max-width: 812px) and (orientation: landscape) {
-
     nav ul li a {
         font-size: 1.3rem;
         line-height: 37px;
     }
-
     .logo.show {
         top: 54vh;
     }
-
     .contact_header div {
         font-size: 1.3rem;
     }
-
     .social span {
         font-size: 1.3rem;
     }
@@ -993,217 +954,170 @@ footer i {
         left: 10vw;
         text-shadow: 2px 2px 2px #444;
     }
-
     nav ul li a {
         font-size: 1.6rem;
         text-shadow: 2px 2px 2px #000;
     }
-
     .project_icon {
         min-width: 70vw;
         max-width: 70vw;
     }
-
     .slogan {
         background-image: url('../img/test.jpeg');
         background-position: center;
         background-attachment: unset;
         height: 100vh;
     }
-
     .contact {
         padding: 80px 0;
     }
-
     .bg {
         background: none;
         background-size: cover;
     }
-
     .mapSection {
         background: none;
     }
-
     #map {
         width: 100%;
     }
-
     .row_technologies {
         height: 185vh;
     }
-
     .skill {
         opacity: 0.5;
         height: 25vh;
         width: 20vh;
         margin: 10px 125px;
     }
-
 }
-
 
 @media (max-width: 736px) and (orientation: landscape) {
     nav {
         min-height: 10vh;
     }
-
     nav a {
         font-size: 1.2rem;
         line-height: 35px;
     }
-
     .logo {
         top: 5vh;
     }
-
     .logo.show {
         top: 45vh;
     }
-
     .description {
         top: 30vh;
     }
-
     .iam {
         background-position: 96% 39px;
     }
-
     .contact_header div {
         font-size: 1.2rem;
     }
-
     .row_aboutMe p {
         font-size: 1.2rem;
     }
-
     .skills {
         padding-top: 120px;
     }
-
     .social span {
         font-size: 1.2rem;
     }
 }
 
-
 @media (max-width: 710px) {
-
     /* NAV */
     nav {
         padding: 15px 2vw;
     }
-
     nav a {
         padding: 0 15px;
     }
-
     .logo {
         background-color: inherit;
         top: 0;
         left: 0;
         text-shadow: 3px 3px 2px black;
     }
-
     .description {
         text-align: center;
         top: 35vh;
         left: auto;
     }
-
     .portfolio {
         padding: 100px 0;
     }
-
     .portfolio .project {
         width: 50%;
         padding-bottom: 100px;
     }
-
     .portfolio .wrap {
         flex-direction: column;
     }
-
     .skills {
         padding-top: 400px;
         padding-bottom: 350px;
     }
-
     .skill_example {
         padding: 10px 0;
     }
-
     .contact button {
         min-width: 300px;
     }
-
     .web {
         display: flex;
         justify-content: center;
     }
-
     .project {
         margin: 0 auto;
     }
 }
 
+@media (max-width: 667px) {}
 
-@media (max-width: 667px) {
-
-}
-
-@media (max-width: 640px) and (orientation: landscape) {
-
-}
+@media (max-width: 640px) and (orientation: landscape) {}
 
 @media (max-width: 540px) {
     nav {
         position: static;
         padding: 10px 0 0;
     }
-
     nav ul {
         text-align: center;
         flex-direction: column;
         display: none;
     }
-
     nav ul li a {
         padding: 10px;
         line-height: 35px;
         font-size: 2.5rem;
     }
-
     .logo {
         left: auto;
         top: auto;
         z-index: 1;
         display: none;
     }
-
     .hamburger {
         display: block;
         padding-bottom: 5px;
         font-size: 45px;
         cursor: pointer;
     }
-
     .description {
         top: 20vh;
     }
-
     .bounce {
         margin: 75vh 0 0;
     }
-
     .logo.show {
         top: 50vh;
     }
-
     .project_icon {
         min-width: 75vw;
         max-width: 75vw;
     }
-
     #map {
         height: 70vh;
     }
@@ -1213,7 +1127,6 @@ footer i {
     .project_about h3 {
         font-size: 1.8rem;
     }
-
     .contact button {
         min-width: 280px;
     }
@@ -1223,7 +1136,6 @@ footer i {
     .bounce {
         margin: 70vh 0 0;
     }
-
     .description {
         top: 15vh;
     }
