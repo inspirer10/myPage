@@ -1074,10 +1074,6 @@ footer i {
     }
 }
 
-@media (max-width: 667px) {}
-
-@media (max-width: 640px) and (orientation: landscape) {}
-
 @media (max-width: 540px) {
     nav {
         position: static;
@@ -1120,6 +1116,9 @@ footer i {
     }
     #map {
         height: 70vh;
+    }
+    .skill {
+        margin: 10px 100px;
     }
 }
 

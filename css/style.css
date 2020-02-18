@@ -1449,6 +1449,9 @@ footer i {
   #map {
     height: 70vh;
   }
+  .skill {
+    margin: 10px 100px;
+  }
 }
 
 @media (max-width: 384px) {
