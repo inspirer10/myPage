@@ -2,17 +2,17 @@ AOS.init();
 
 let windowHeight = window.innerHeight;
 
-var width = 1100;
+const width = 1100;
 
 function scrollWin() {
     window.scrollTo(0, width);
 };
 
 
-var phone = document.querySelector('.container');
-var hamburger = document.querySelector('.hamburger');
-var ul = document.querySelector('ul');
-var logo = document.querySelector('.logo');
+const phone = document.querySelector('.container');
+const hamburger = document.querySelector('.hamburger');
+const ul = document.querySelector('ul');
+const logo = document.querySelector('.logo');
 
 phone.addEventListener("click", function () {
     phone.classList.toggle('alert-is-shown');
@@ -25,9 +25,9 @@ hamburger.addEventListener("click", function () {
 });
 
 
-var mobile = document.querySelectorAll('nav ul li a');
+let mobile = document.querySelectorAll('nav ul li a');
 
-for (var mobile of mobile) {
+for (let mobile of mobile) {
     mobile.addEventListener('click', function () {
         ul.classList.remove('mobile');
         logo.classList.toggle('mobile')

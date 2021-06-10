@@ -32,16 +32,6 @@ body {
     display: flex !important;
 }
 
-.background {
-    background-image: url(../img/map2.jpg);
-    filter: brightness(35%) blur(5px);
-    position: absolute;
-    width: 100%;
-    height: 70vw;
-    background-size: cover;
-    z-index: -1;
-}
-
 .mapSection {
     background-image: url(../img/map.jpg);
     height: 90vh;
@@ -55,7 +45,7 @@ body {
 #map {
     height: 500px;
     width: 50%;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 #phone {
@@ -85,7 +75,7 @@ body {
     overflow: hidden;
     border-radius: 60px 60px / 25px 25px 20px 20px;
     /* z-index: -5; */
-    background-image: url(https://media.idownloadblog.com/wp-content/uploads/2016/05/Reset-iOS-home-screen-layout.png);
+    background-image: url(../img/iPhone.png);
     background-size: contain;
     cursor: pointer;
     &::before {
@@ -141,13 +131,6 @@ body {
     z-index: 21;
 }
 
-.row_aboutMe {
-    flex-basis: 25%;
-}
-
-
-/* header */
-
 
 /* Nav */
 
@@ -155,10 +138,10 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 25;
-    padding: 10px 12vw;
+    padding: 10px 5vw;
     text-align: right;
     background-color: #3f72af;
-    box-shadow: 0 10px 30px 0px white;
+    box-shadow: 0 7px 30px 0px white;
 }
 
 nav ul {
@@ -170,6 +153,7 @@ nav ul {
 }
 
 nav a {
+    cursor: pointer;
     text-decoration: none;
     padding: 0 20px;
     display: block;
@@ -178,18 +162,37 @@ nav a {
     line-height: 61px;
     z-index: 1;
     color: white;
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    &:after {
+        content: '';
+        position: absolute;
+        transition: .5s;
+        width: 0;
+        bottom: 0;
+        height: 3px;
+        background: #f7f7f7;
+        right: 0;
+        left: auto;
+    }
 }
 
 nav a:hover {
-    transition: 0.3s;
-    font-weight: bold;
+    &:after {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .hamburger {
+    position: static;
     display: none;
 }
 
 .logo {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +204,6 @@ nav a:hover {
     background-color: #1e4ea0;
     font-size: 7.5rem;
     font-weight: bold;
-    cursor: pointer;
 }
 
 
@@ -370,8 +372,7 @@ header img {
 .aboutMe {
     background-color: rgb(255, 255, 255);
     text-align: center;
-    position: relative;
-    padding: 120px 70px;
+    padding: 5vh 0;
 }
 
 .aboutMe h2 {
@@ -380,26 +381,26 @@ header img {
     font-size: 4.5rem;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     color: #3f72af;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .row_aboutMe {
-    //flex-basis: 25%;
+    flex-basis: 25%;
 }
 
 .row_aboutMe p {
-    font-size: 1.8rem;
-    line-height: 160%;
+    font-size: 1.9rem;
+    line-height: 150%;
     text-align: justify;
-    padding: 0 25px;
+    padding: 0 30px;
 }
 
 
@@ -439,7 +440,7 @@ header img {
 /*  Technologies */
 
 .skills {
-    padding: 120px 0;
+    padding: 10vh 0;
 }
 
 .skills h2 {
@@ -559,15 +560,18 @@ header img {
 }
 
 .project {
+    flex-basis: 33.333%;
     height: 30vh;
     margin: 3% auto 5%;
-    padding: 0 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .web {
-    //height: 70%;
-    width: 100%;
-    height: 32vh;
+    width: auto;
+    height: 31vh;
 }
 
 // IMG
@@ -759,6 +763,9 @@ footer i {
 }
 
 @media (max-width: 1250px) {
+    .row_technologies {
+        height: auto;
+    }
     #map {
         width: 75%;
     }
@@ -768,9 +775,6 @@ footer i {
 }
 
 @media (max-width: 1200px) {
-    .portfolio h2 {
-        margin-bottom: 15px;
-    }
     .wrap {
         flex-direction: column;
     }
@@ -808,18 +812,14 @@ footer i {
     .aboutMe {
         padding: 120px 0;
     }
-    .skills {
-        padding-bottom: 70px;
-    }
     .skill {
-        //width: 10vh;
         height: 10vh;
+        margin: 25px 125px;
     }
     .skill_example p {
         font-size: 4rem;
     }
     .portfolio .project {
-        //width: 51%;
         height: 35vh;
     }
 }
@@ -841,16 +841,16 @@ footer i {
     }
     .aboutMe h2 {
         font-size: 4.5rem;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     .row {
         flex-direction: column;
     }
     .row_aboutMe p {
         text-align: center;
-        padding: 20px 25px;
+        padding: 20px;
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -930,9 +930,6 @@ footer i {
     .slogan .bg {
         padding: 60px 0;
     }
-    .skills {
-        padding: 90px 0 0;
-    }
     .skill {
         width: 17vh;
         height: 22vh;
@@ -988,20 +985,28 @@ footer i {
     }
 }
 
-@media (max-width: 807px) {
-    .skills {
-        padding: 220px 0;
-    }
-}
-
 @media (max-width: 768px) {
+    .project_about {
+        width: 90vw;
+    }
+    .project_about p {
+        margin-top: 3px;
+    }
+    .skills {
+        padding: 6vh 0 4vh;
+    }
+    .skill {
+        opacity: 0.5;
+        height: 25vh;
+        width: 20vh;
+        margin: 10px 125px;
+    }
     .logo {
-        top: 4vh;
-        left: 10vw;
+        top: 3vh;
+        left: 7vw;
         text-shadow: 2px 2px 2px #444;
     }
     nav ul li a {
-        font-size: 1.6rem;
         text-shadow: 2px 2px 2px #000;
     }
     .project_icon {
@@ -1021,20 +1026,19 @@ footer i {
         background: none;
         background-size: cover;
     }
+    .portfolio {
+        padding: 30px 0 0;
+    }
     .mapSection {
         background: none;
+        height: auto;
     }
     #map {
+        border: none;
         width: 100%;
     }
     .row_technologies {
-        height: 185vh;
-    }
-    .skill {
-        opacity: 0.5;
-        height: 25vh;
-        width: 20vh;
-        margin: 10px 125px;
+        height: auto;
     }
 }
 
@@ -1064,9 +1068,6 @@ footer i {
     .row_aboutMe p {
         font-size: 1.2rem;
     }
-    .skills {
-        padding-top: 120px;
-    }
     .social span {
         font-size: 1.2rem;
     }
@@ -1077,32 +1078,28 @@ footer i {
     nav {
         padding: 15px 2vw;
     }
-    nav a {
-        padding: 0 15px;
+    nav ul {
+        justify-content: center;
+    }
+    nav ul li a {
+        font-size: 2rem;
     }
     .logo {
-        background-color: inherit;
-        top: 0;
-        left: 0;
-        text-shadow: 3px 3px 2px black;
+        background: none;
+        display: none;
     }
     .description {
         text-align: center;
         top: 35vh;
-    }
-    .portfolio {
-        padding: 100px 0;
+        left: 0;
+        width: 100%;
     }
     .portfolio .project {
         width: 50%;
-        padding-bottom: 100px;
+        padding-bottom: 15vh;
     }
     .portfolio .wrap {
         flex-direction: column;
-    }
-    .skills {
-        padding-top: 400px;
-        padding-bottom: 350px;
     }
     .skill_example {
         padding: 10px 0;
@@ -1118,14 +1115,20 @@ footer i {
         margin: 0 auto;
     }
     .project_icon {
-        max-width: 72vw;
+        max-width: 73vw;
     }
     .row_aboutMe p {
         padding: 20px 5px;
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 550px) {
     nav {
         position: static;
         padding: 10px 0 0;
@@ -1136,19 +1139,18 @@ footer i {
         display: none;
     }
     nav ul li a {
-        padding: 10px;
+        padding: 15px 0;
         line-height: 35px;
         font-size: 2.5rem;
+        position: static;
     }
     .logo {
-        left: auto;
-        top: auto;
         z-index: 1;
         display: none;
     }
     .hamburger {
         display: block;
-        padding-bottom: 5px;
+        padding: 0 30px 15px;
         font-size: 45px;
         cursor: pointer;
     }
@@ -1162,7 +1164,7 @@ footer i {
         top: 50vh;
     }
     .project_icon {
-        max-width: 75vw;
+        max-width: 82vw;
     }
     #map {
         height: 70vh;
@@ -1175,9 +1177,9 @@ footer i {
     }
 }
 
-@media (max-width: 384px) {
+@media (max-width: 385px) {
     .project_about h3 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .contact button {
         min-width: 280px;
